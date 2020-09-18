@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시멘틱 태그</title>
+
+    <style>
+        #wrap {width: 1000px; margin: 0 auto;}
+        header {width: 1000px; height: 100px; background: #111111;}
+        nav {width: 1000px; height: 100px; background: #222222;}
+        aside {float: left; width: 300px; height: 600px; background: #333333;}
+        section {float: left; width: 700px; height: 600px; background: #444444;}
+        footer {clear: both; width: 1000px; height: 100px; background: #555555;} 
+    </style>
+
+</head>
+<body>
+    <!-- html5 시멘틱 태그 이전의 태그 -->
+    <!-- <div id="wrap">
+        <div class="header"></div>
+        <div class="nav"></div>
+        <div class="side"></div>
+        <div class="contents"></div>
+        <div class="footer"></div>
+    </div> -->
+    <!-- 레이아웃 구조는 태그는 블록구조로 만들어줘야 한다. -->
+    
+    <!-- html5의 시멘틱 태그(의미론적인 태그) -> IE8에서는 지원이 안된다. -->
+    <!-- 시멘틱 태그는 의미에 따라서 써야 하기 때문에 정확한 태그의 의미를 아는 것이 중요하다. -->
+    <div id="wrap">
+        <header></header>
+        <nav></nav>
+        <aside></aside>
+        <section></section>
+        <footer></footer>
+    </div>
+
+    <!-- <header> 태그 
+        <header> 태그는 웹 문서의 소개 컨텐츠 및 네비게이션 링크를 정의.
+        <header> 태그는 제목, 로고, 아이콘, 저자 정보등을 포함한다.
+        <header> 태그는 섹션의 제목 태그를 포함하기 위한 것이지만 필수사항은 아님. (= 섹션마다 제목 태그(h1-h6)에 header태그를 꼭 포함 시키지 않아도 된다.)
+    -->
+
+    <!-- <nav> 태그
+        <nav> 태그는 웹 문서에 네비게이션 링크를 정의.
+        <nav> 태그는 모든 링크가 <nav> 태그일 필요는 없지만, 주요 네이게이션 링크는 <nav> 태그를 사용.
+        <nav> 태그는 일반적으로 <footer> 영역에 링크는 <nav> 태그를 사용하지 않음.
+        <nav> 태그는 웹 문서에 여러개 있을 수 있지만 주로 사이트 탐색용과 페이지 탐색용으로 사용.
+    -->
+
+    <!-- <aside> 태그
+        <aside> 태그는 웹 페이지의 메인 콘텐츠와 관련된 사이드의 정보, 광고 등 부분적인 정보를 그룹화 할 때 사용.
+    -->
+    
+    <!-- <section> 태그
+        <section> 태그는 주제별 그룹의 콘텐츠 섹션을 정의.
+        <section> 태그는 탭 페이지, 홈페이지의 소개, 연락처, 뉴스항목 등과 같이 주제별로 분할 할 수 있다.
+        <section> 태그에는 제목을 나타내는 <h1> ~ <h6> 태그가 포함되야 한다.
+        <section> 태그는 문장이나 문서의 스타일링 요소가 아님. 스크립트의 편의나 영역을 위함이라면 div가 좋다.
+        <section> 태그가 일반적인 영역의 주제가 아니라면 구체적인 요소(<article>, <aside>, <nav>)를 대신 사용하는 것이 더 적합하다.
+    -->
+
+    <!-- <article> 태그 
+        <article> 태그는 포럼, 신문기사, 잡지, 블로그 항목, 게시판 글 등 콘텐츠의 독립적인 항목.
+        <section>은 하나의 주제를 나타낸다면, <article>은 주제를 묶는 독립적인 콘텐츠.
+        <section> 요소 안에 <article> 요소를 쓸 수 있으며, <article> 요소 안에도 <section> 요소 사용 가능. 
+        article은 section보다는 작은개념인데, article안에 section이 들어 갈 수 있고, section안에 article이 들어 갈 수 있다.
+    -->
+
+    <!-- <footer> 태그  
+        <footer> 태그는 사이트와 관련된 정보(저작권자, 연락처, 사이트 맵, 관련된 문서 링크)가 포함.
+        <footer> 태그는 한 문서에서 여러번 사용할 수 있습니다.
+        <footer> 태그는 섹션을 구성하는 태그가 아니가 때문에 섹션을 잡기 위해서 사용하는 위한 태그로는 적절하지 않다.
+        <footer> 태그안에는 <address> 요소가 포함될 수 있다.
+            *접근성 지키기*
+        <footer> 태그는 화면 판독기에 의해 바닥글이라고 정의되어 있지 않기 때문에 footer 요소에는 role="콘텐츠 정보"라고 추가해야 한다.
+    -->
+    
+</body>
+</html>
