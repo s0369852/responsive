@@ -4,8 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>반응형 레이아웃 03</title>
+
+    <style>
+
+        *{margin: 0; padding: 0;}
+        body {background: #ffab91;}
+        #wrap {margin: 0 auto; width: 1200px;}
+        .header {width: 100%; height: 150px; background: #ff8a65;}
+        .aside {float: left; width: 30%; height: 900px; background: #ff7043;}
+        .article1 {float: left; width: 70%; height: 300px; background: #f4511e;}
+        .article2 {float: left; width: 70%; height: 300px; background: #e64a19;}
+        .article3 {float: left; width: 70%; height: 300px; background: #dd2c00;}
+        .footer {clear: both; width: 100%; height: 150px; background: #bf360c;}
+
+        /* 블럭 구조의 가운데 정렬 => margin: 0 auto; */
+        /* 인라인 구조의 가운데 정렬 => text-align: center; */
+
+        /* 화면 너비 769px ~ 1240px */
+        @media (max-width: 1240px) {
+            #wrap {width: 100%;}
+            .article1 {height: 450px;}
+            .article2 {height: 450px;}
+            .article3 {width: 100%;}
+        }
+
+        /* 화면 너비 481px ~ 768px */
+        @media (max-width: 768px) {
+            .aside {width: 100%; height: 200px}
+            .article1 {width: 50%; height: 450px;}
+            .article2 {width: 50%; height: 450px;}
+        }
+
+        /* 화면 너비 0 ~ 480px */
+        @media (max-width: 480px) {
+            .article1 {width: 100%; height: 300px;}
+            .article2 {width: 100%; height: 300px;}
+            .article3 {height: 300px;}
+        }
+        /* float: none을 원래는 해줘야 하는데 width값으로 레이아웃을 수정할 수 있어서 코드를 많이 잡아먹지 않기 위해서 생략한 것이다. */
+
+    </style>
+
 </head>
 <body>
-    
+    <div id="wrap">
+        <header class="header"></header>
+        <aside class="aside"></aside>
+        <section class="article1"></section>
+        <section class="article2"></section>
+        <section class="article3"></section>
+        <footer class="footer"></footer>
+    </div>
 </body>
 </html>
