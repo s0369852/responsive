@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 레이아웃 04</title>
+
+    <style>
+
+        * {margin: 0; padding: 0;}
+        body {background: #d1c4e9;}
+        #wrap {margin: 0 auto; width: 1200px;}
+        .header {width: 100%; height: 150px; background: #b39ddb;}
+        .nav {width: 100%; height: 300px; background: #9575cd;}
+        .section {overflow: hidden; padding: 5%; width: 90%; background: #7e57c2;}
+        .section article {margin: 1%; float: left; width: 18%; height: 170px; background: #512da8; border-radius: 5px;}
+        /* 한줄에 5개씩 들어가 있는 article의 형태를 만들기 위해, width값을 5등분을 해야한다. 그래서 width값이 20%가 나왔지만,
+            여백이 없는 상태로 다 붙어서 나오기 때문에 구별이 가지 않는다. 
+            여백으로 margin을 1%씩 주게 되면 상하 합쳐서 2%, 좌우 합쳐서 2%를 먹게 되는데, 이렇게 되면 한줄에 4개씩 나오고 나머지 2개가 밑으로 떨어지는 현상이 나온다.
+            왜 그러냐면 이미 width값을 20% 준 상황에서 여백을 2%씩 더하면 총 넓이는 110%로 이기 때문.
+            그래서 margin에 1% 씩 줬다면 width값에서 margin값을 빼줘야 한다. 
+            따라서 width값은 18%가 되야 맞는다.
+        */
+        .footer {width: 100%; height: 150px; background: #5e35b1;}
+
+        /* 화면 너비 769px ~ 1200px */
+        @media (max-width: 1220px) {
+            #wrap {width: 100%;}
+            .section article {width: 23%;}
+            .section article:nth-child(5n) {display: none;}
+        }
+
+        /* 화면 너비 481px ~ 768px */
+        @media (max-width: 768px) {
+            .section article {width: 31.3333%;}
+            .section article:nth-child(5) {display: block;}
+        }
+
+        /* 화면 너비 0 ~ 480px */
+        @media (max-width: 480px) {
+            .section article {width: 48%;}
+            .section article:nth-child(5n) {display: block;}
+        }
+
+    </style>
+
+</head>
+<body>
+    <div id="wrap">
+        <header class="header"></header>
+        <nav class="nav"></nav>
+        <section class="section">
+            <article class="article1"></article>
+            <article class="article2"></article>
+            <article class="article3"></article>
+            <article class="article4"></article>
+            <article class="article5"></article>
+            <article class="article6"></article>
+            <article class="article7"></article>
+            <article class="article8"></article>
+            <article class="article9"></article>
+            <article class="article10"></article>
+        </section>
+        <footer class="footer"></footer>
+    </div>
+</body>
+</html>
