@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 레이아웃 01</title>
+    
+    <style>
+
+        * {padding: 0; margin: 0;}
+        body {background: #b2dfdb;}
+        #wrap {width: 1200px; margin: 0 auto;}
+        header {width: 100%; height: 150px; background: #26a69a;}
+        aside {float:left; width: 30%; height: 700px; background: #00796b;}
+        section {float: left; width: 70%; height: 700px; background: #00897b;}
+        footer {clear: both; width: 100%; height: 150px; background: #00695c; }
+
+        /* 화면 너비 769px ~ 1220px */
+        @media (max-width: 1220px) {
+            /* width값이 1200px로 작업을 해놨기 때문에 1200px로 겹치게 되면 스크롤바가 생길 수 있다. */
+            /* 그래서 겹치지 않게 하기 위해 오차를 준다. 반응형 할때는 스크롤 바가 생기면 안된다. */
+            #wrap {width: 95%;}
+            /* 나머지 5%는 좌우 여백(margin)값이 된다. */
+        }
+
+        /* 화면 너비 481px ~ 768px */
+        @media (max-width: 768px) {
+            #wrap {width: 100%;}
+        }
+
+        /* 화면 너비 0 ~ 480px */
+        @media (max-width: 480px) {
+            #wrap {width: 100%;}
+            header {height: 300px;}
+            aside {float:none; width: 100%; height: 300px;}
+            section {float:none; width: 100%; height: 300px;}
+            /* float: none대신 width: 100%로만 적어도 된다. */
+        }
+
+    </style>
+
+</head>
+<body>
+    <div id="wrap">
+        <header class="header"></header>
+        <aside class="aside"></aside>
+        <section class="section"></section>
+        <footer class="footer"></footer>
+    </div>
+</body>
+</html>
