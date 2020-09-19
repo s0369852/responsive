@@ -1,9 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="BYUNG JU LEE">
+    <meta name="description" content="반응형 사이트 만들기">
+    <meta name="keywords" content="반응형, 웹, 접근성, HTML5, CSS3, web, responsive">
     <title>반응형 사이트 만들기</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="icon/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="icon/favicon-152.png">
+    <link rel="icon" href="icon/favicon-16.png" sizes="16x16">
+    <link rel="icon" href="icon/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="icon/favicon-48.png" sizes="48x48">
+    <link rel="icon" href="icon/favicon-64.png" sizes="64x64">
+    <link rel="icon" href="icon/favicon-128.png" sizes="128x128">
+
+    <!-- HTML5shiv IE6~8 -->
+    <!-- HTML5태그를 쓰는데 있어서 구버전(IE6~8)에선 인식을 못할 수 있다. 그것을 인식 하도록 도와주는 스크립트. -->
+    <!-- IE9이하 일때만 사용가능 하고, 평소에는 사용하지 않는다. -->
+    
+    <!-- IE구버전을 사용할 때 경고창을 띄우기 위한 조건식.(아래는 주석 표시처럼 보이지만 주석이 아닌 조건식이다.) -->
+    <!--[if it IE9]>
+        <script src="js/html5shiv.min.js"></script>
+        <script type="text/javascript">
+            alert("현재 당신이 보는 브라우저는 지원하지 않습니다. 최신 브라우저로 업데이트 해주세요!");
+        </script>
+    <![endif]-->
+
+    <!-- JavaScript Libraries -->
+    <script defer src="js/jquery.min_1.12.4.js"></script>
+    <script defer src="js/modernizr-custom.js"></script>
+    <!-- modernizer => 현재 사용하는 브라우저의 특징을 응답해준다.(현재 브라우저에서 지원하는지 안하는지를 알려준다.) -->
+    <!-- 웹페이지의 개발자 도구를 꺼내보면, 
+        <html lang="ko" class=" cookies json queryselector svg atobbtoa atob-btoa classlist cssgradients no-touchevents displaytable display-table nthchild backgroundsize bgsizecover boxshadow boxsizing">
+        이렇게 뜨는게 보이는데 이게 바로 modernizer.
+        현재 사이트에서 작동이 되는 것을 알려준다. 앞에 "no"가 붙은 것은 안된다. => ex). no-touchevents (터치이벤트 기능은 지원이 안된다.)
+    -->
+
+
 </head>
 <body>
     
