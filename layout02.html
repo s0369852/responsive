@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 레이아웃 02</title>
+
+    <style>
+
+        * {margin: 0; padding: 0;}
+        body {background: #b2ebf2;}
+        #wrap {width: 100%;}  
+        header {width: 100%; height: 150px; background: #26c6da;}
+        aside {float: left; width: 30%; height: 700px; background: #00acc1;}
+        section {float: left; width: 40%; height: 700px; background: #0097a7;}
+        article {float:left; width: 30%; height: 700px; background: #00838f;}
+        footer {clear: both; width: 100%; height: 150px; background: #00b8d4;}
+
+        /* 화면 너비 769px ~ 1200px */
+        @media (max-width: 1200px) {
+            aside {width: 40%;}
+            section {width: 60%;}
+            /* article {clear: both; float: none; width: 100%; height: 300px;} */
+            article {width: 100%; height: 300px;}
+            /* float은 어차피 있는거니까 안쓰고 %로만 작업을 해도 나타난다. */
+        }
+
+        /* 화면 너비 481px ~ 768px */
+        @media (max-width: 768px) {
+            /* aside {float: none;} */
+            aside {display: none;}
+            /* section {float: none; width: 100%; height: 300px;} */
+            section {width: 100%; height: 300px;}
+        }
+
+        /* 화면 너비 0 ~ 480px */
+        @media (max-width: 480px) {
+            header {height: 300px;}
+            footer {height: 300px;}
+        }
+
+    </style>
+
+</head>
+<body>
+    <div id="wrap">
+        <header></header>
+        <aside></aside>
+        <section></section>
+        <article></article>
+        <footer></footer>
+    </div>
+</body>
+</html>
