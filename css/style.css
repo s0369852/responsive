@@ -10,7 +10,7 @@
 /* 레이아웃 */
 #header {background: url(../img/header_bg.jpg) repeat-x center top;}
 
-/* 헤더 */
+/* 헤더 메뉴 */
 .header {height: 327px;}
 .header .header_menu {text-align: right;}
 .header .header_menu a {
@@ -30,6 +30,64 @@
 }
  /* inline구조에서는 상하값이 안먹힌다.(margin, padding) -> display: inline-block; */
 .header .header_menu a:hover {color: #ccc;}
+
+/* 헤더 타이틀 */
+.header_title {
+    margin-top: 55px;
+    text-align: center;
+    font-family: 'Abel', sans-serif;
+}
+.header_title h1 {
+    padding: 5px 30px 5px 30px;
+    display: inline-block;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 900;
+    color: #ffffff;
+    background: #51b0dc;
+    transition: box-shadow 0.3s ease-in-out;
+    -webkit-transition: box-shadow 0.3s ease-in-out;
+    -moz-transition: box-shadow 0.3s ease-in-out;
+    -ms-transition: box-shadow 0.3s ease-in-out;
+    -o-transition: box-shadow 0.3s ease-in-out;
+    /*transition은 ":hover"가 아닌 원본에다가 효과를 준다.*/
+    /*transition: transition-property | transition-duration | transition-timing-function | transition-delay */    
+    /*         
+    transition-property => transition의 적용 여부를 정의. (적용 하고자 하는 속성값)
+    transition-duration => 요소의 움직임의 지속시간을 정의.        
+    transition-timing-function => 요소의 움직임 기능을 정의.         
+    transition-delay => 요소의 움직임의 시간을 지연시킨다.     
+    */
+}
+.header_title h1:hover {
+    box-shadow:
+        inset -9em 0 0 0 #257fac,
+        inset 9em 0 0 0 #257fac
+        /* box-shadow : none | h-shadow(수평) | v-shadow(수직) | blur | spread | color | inset */
+        /* inset => 내부 그림자 생성. "%"단위는 먹지 않는다. 반응형이기 때문에 em,rem 등의 상대적인 단위로 나타내준다. */
+        /* 반응형에서 가장 중요한 것은 상대적인 단위로 표현하는 것이다. px보다는 %나, em, rem 등. */
+}
+/* css3부터는 속성을 2개 이상 주고 싶으면 ","를 이용해서 작업할 수 있다. */
+.header_title a {
+    margin-top: -7px;
+    padding: 10px 20px 10px 20px;
+    display: inline-block;
+    font-size: 16px;
+    color: #ffffff;
+    background: #4a9abf;
+    transition: box-shadow 0.5s ease-in-out;
+    -webkit-transition: box-shadow 0.5s ease-in-out;
+    -moz-transition: box-shadow 0.5s ease-in-out;
+    -ms-transition: box-shadow 0.5s ease-in-out;
+    -o-transition: box-shadow 0.5s ease-in-out;
+}
+.header_title a:hover {
+    box-shadow:
+    0 0 0 5px rgba(75,154,191,.9) inset,
+    0 0 0 100px rgba(0,0,0,.1) inset
+    /* inset은 앞에다가 쓸 수도 있고, 뒤에다가 쓸 수도 있다. */
+}
 
 
 /* 미디어 쿼리 */
