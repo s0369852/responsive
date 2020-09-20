@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+/* 컨테이너 */
+.container {
+    margin: 0 auto;
+    width: 1200px;
+    background: rgba(0,0,0,.3);
+}
+
+/* 레이아웃 */
+#header {background: url(../img/header_bg.jpg) repeat-x center top;}
+
+/* 헤더 */
+.header {height: 327px;}
+.header .header_menu {text-align: right;}
+.header .header_menu a {
+    display:inline-block;
+    padding: 8px 0 6px 10px;
+    font-family: 'Abel', sans-serif;
+    color: #ffffff;
+    transition: color 0.3s ease;
+    -webkit-transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
+    -ms-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    /* 
+    CSS3에서 주로 사용되는 기능은 trasition. 
+    transition: color 0.3s ease; => color 값을 0.3초 동안 ease효과를 사용하여 바꿔라.
+    */
+}
+ /* inline구조에서는 상하값이 안먹힌다.(margin, padding) -> display: inline-block; */
+.header .header_menu a:hover {color: #ccc;}
+
+
+/* 미디어 쿼리 */
+@media (max-width: 1220px) {
+    .container {width: 100%;}
+    .row {padding: 0 15px;}
+}
