@@ -10,6 +10,7 @@
 /* 레이아웃 */
 #header {background: url(../img/header_bg.jpg) repeat-x center top;}
 #nav {background-color: #f6fdff;}
+#title {background-color: #eaf7fd;} 
 
 /* 헤더 메뉴 */
 .header {height: 327px;}
@@ -201,10 +202,10 @@
     height: 3px;
     background-color: #25a2d0;
     border-radius: 50%;
-    -webkit-border-radius:;
-    -moz-border-radius:;
-    -ms-border-radius:;
-    -o-border-radius:;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 .nav li a {position: relative;}
 .nav li a::after {
@@ -214,7 +215,7 @@
     bottom: 0;
     width: 0;
     height: 2px;
-    background-color: #25aad0;c
+    background-color: #25aad0;
     transition: all .2s ease-out;
     -webkit-transition: all .2s ease-out;
     -moz-transition: all .2s ease-out;
@@ -223,7 +224,43 @@
 }
 .nav li:hover a::after {width: 100%;}
 
-
+/* 타이틀 */
+.title {
+    position: relative;
+    text-align: center;
+}
+.title h2 {
+    padding: 5px 0;
+    font-size: 39px;
+    font-family: 'Yeon Sung', cursive;
+    color: #0093bd;
+}
+.title a.btn {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 35px;
+    color: #ffffff;
+    background-color: #3192bf;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+}
+.title a.btn:hover {
+    box-shadow:
+        0 0 0 3px rgba(75,154,191,.9) inset,
+        0 0 0 100px rgba(0,0,0,.1) inset;
+}
 
 /* 미디어 쿼리 */
 @media (max-width: 1220px) {
