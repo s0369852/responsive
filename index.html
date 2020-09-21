@@ -39,7 +39,10 @@
     <meta property="twitter:image" content="http://s0369852.dothome.co.kr/web_responsive/icon/favicon-152.png" />
 
     <!-- 웹 폰트 -->
+    <!-- 실무에서는 이렇게 3개 넣는게 말이 안된다. 하나으 4mb정도 이기 때문.  -->
     <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap" rel="stylesheet">
 
     <!-- HTML5shiv IE6~8 -->
     <!-- HTML5태그를 쓰는데 있어서 구버전(IE6~8)에선 인식을 못할 수 있다. 그것을 인식 하도록 도와주는 스크립트. -->
@@ -169,9 +172,19 @@
     </nav>
     <!-- // nav -->
 
-    <article>
-        <h2>반응형 사이트 서브 타이틀</h2>
+    <article id="title">
+        <div class="container">
+            <div class="title">
+                <h2>"디블리셔 이병주 입니다."</h2>
+                <a href="#" class="btn">
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    <span class="ir_so">전체메뉴 보기</span>
+                </a>
+            </div>
+        </div>
     </article>
+    <!-- // title -->
+
     <!-- main은 사이트에 딱 한번만 사용할 수 있다. (제일 중요한 부분을 감싸는 것.) -->
     <main>    
         <section>
