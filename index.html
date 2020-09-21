@@ -11,6 +11,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
 
     <!-- 파비콘 -->
     <link rel="shortcut icon" href="icon/favicon.ico">
@@ -20,6 +21,22 @@
     <link rel="icon" href="icon/favicon-48.png" sizes="48x48">
     <link rel="icon" href="icon/favicon-64.png" sizes="64x64">
     <link rel="icon" href="icon/favicon-128.png" sizes="128x128">
+
+    <!-- 페이스북, 트위터 공유하기 -->
+    <!-- Facebook meta tags -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="반응형 사이트 만들기" />
+    <meta property="og:url" content="http://s0369852.dothome.co.kr/web_responsive/index.html" />
+    <meta property="og:image" content="http://s0369852.dothome.co.kr/web_responsive/icon/favicon-152.png" />
+    <!-- og:img => 최소 200x200이어야 한다. (크기 제한.) => 지금의 이미지는 작아서 나타나지 않는다. -->
+    <meta property="og:site_name" content="반응형 사이트 만들기" />
+    <meta property="og:description" content="반응형 사이트 따라하기" />
+    <!-- twitter meta tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@s0369852" />
+    <meta name="twitter:title" content="반응형 사이트 만들기" />
+    <meta name="twitter:description" content="반응형 사이트 만들기" />
+    <meta property="twitter:image" content="http://s0369852.dothome.co.kr/web_responsive/icon/favicon-152.png" />
 
     <!-- 웹 폰트 -->
     <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
@@ -39,6 +56,7 @@
     <!-- JavaScript Libraries -->
     <script defer src="js/jquery.min_1.12.4.js"></script>
     <script defer src="js/modernizr-custom.js"></script>
+    <script defer src="js/main.js"></script>
     <!-- modernizer => 현재 사용하는 브라우저의 특징을 응답해준다.(현재 브라우저에서 지원하는지 안하는지를 알려준다.) -->
     <!-- 웹페이지의 개발자 도구를 꺼내보면, 
         <html lang="ko" class=" cookies json queryselector svg atobbtoa atob-btoa classlist cssgradients no-touchevents displaytable display-table nthchild backgroundsize bgsizecover boxshadow boxsizing">
@@ -67,6 +85,21 @@
                         <a href="https://github.com/s0369852/responsive.git">github.com/s0369852</a>
                     </div>
                     <!-- //header_title -->
+
+                    <div class="header_icon">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-html5" aria-hidden="true"></i><span>HTML5</span></a></li>
+                            <li><a href="#"><i class="fa fa-github" aria-hidden="true"></i><span>Github</span></a></li>
+                            <li><a href="#" class="facebook"><i class="fa fa-facebook-square" aria-hidden="true"></i><span>Facebook</span></a></li>
+                            <li><a href="#" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i><span>Twitter</span></a></li>
+                        </ul>
+
+                    <!-- 페이스북, 트위터 공유하기 디버깅 사이트 
+                        https://developers.facebook.com/tools/debug/
+                        https://cards-dev.twitter.com/validator
+                    -->
+                    </div>
+                    <!-- //header_icon -->
 
                 </div>
             </div>

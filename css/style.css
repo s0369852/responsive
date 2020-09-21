@@ -4,7 +4,7 @@
 .container {
     margin: 0 auto;
     width: 1200px;
-    background: rgba(0,0,0,.3);
+    /* background: rgba(0,0,0,.3); */
 }
 
 /* 레이아웃 */
@@ -23,10 +23,8 @@
     -moz-transition: color 0.3s ease;
     -ms-transition: color 0.3s ease;
     -o-transition: color 0.3s ease;
-    /* 
-    CSS3에서 주로 사용되는 기능은 trasition. 
-    transition: color 0.3s ease; => color 값을 0.3초 동안 ease효과를 사용하여 바꿔라.
-    */
+    /*CSS3에서주로사용되는기능은trasition.transition: color 0.3s ease;
+    =>color값을0.3초동안ease효과를사용하여바꿔라.*/
 }
  /* inline구조에서는 상하값이 안먹힌다.(margin, padding) -> display: inline-block; */
 .header .header_menu a:hover {color: #ccc;}
@@ -89,9 +87,96 @@
     /* inset은 앞에다가 쓸 수도 있고, 뒤에다가 쓸 수도 있다. */
 }
 
+/* 헤더 아이콘 */
+.header .header_icon {
+    margin-top: 40px;
+    padding-bottom: 45px;
+    text-align: center;
+}
+.header .header_icon ul li {
+    margin: 0 2px; 
+    display: inline;
+}
+.header .header_icon ul li a {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    font-size: 35px;
+    line-height: 60px;
+    color: #ffffff;
+    background: #3192bf;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+.header .header_icon ul li a:hover {
+    font-size: 36px;
+    box-shadow: 
+        0 0 0 3px rgba(75,154,191,.9) inset,
+        0 0 0 100px rgba(0,0,0,.1) inset;
+}
+.header .header_icon ul li a span {
+    opacity: 0;
+    padding: 4px 9px;
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    font-size: 12px;
+    line-height: 1.6;
+    background: #3192bf;
+    border-radius: 6px 0;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+/* transform으로 가운데 정렬 하는 방법.
+    => x축(left, right)과 y(top, bottom)축을 기준으로, 움직인 위치와 반대로(음수값) 적용하면 된다. */
+.header .header_icon ul li a span::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    margin-left: -5px;
+    /* border값으로 삼각형을 만들어 줬는데 5px로 만들었으니까 다시 -5px을 줘서 중간으로 자리를 움직이게 한다. */
+    border-top: 5px solid #3192bf;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
+.header .header_icon ul li a:hover span{
+    opacity: 1;
+    top: -35px;
+}
+
+
 
 /* 미디어 쿼리 */
 @media (max-width: 1220px) {
     .container {width: 100%;}
     .row {padding: 0 15px;}
 }
+
+
+
+
+
+
+
+
+
+
+
