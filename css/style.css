@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+/* 반응형은 작업을 할때 섹션 하나 하나마다 하는게 좋다.
+    나중에 한번에 코딩하려고 하면 오류가 났을 때 어디서 났는지가 찾기 어려워 지기 때문.
+*/
+
 /* 컨테이너 */
 .container {
     margin: 0 auto;
@@ -8,14 +12,17 @@
 }
 
 /* 레이아웃 */
-#header {background: url(../img/header_bg.jpg) repeat-x center top;}
+body {background: url(../img/header_bg.jpg) repeat-x center top;}
+/* #header {} => 반응형 할 때 height값을 빼주려고 auto로 놨기 때문에 배경까지 지워진 걸 볼 수 있다.
+                배경을 보이게 하려면 background를 boay로 옮겨주면 된다.
+*/
 #nav {background-color: #f6fdff;}
 #title {background-color: #eaf7fd;} 
 
 /* 헤더 메뉴 */
 .header {height: 327px;}
-.header .header_menu {text-align: right;}
-.header .header_menu a {
+.header_menu {text-align: right;}
+.header_menu a {
     display:inline-block;
     padding: 8px 0 6px 10px;
     font-family: 'Abel', sans-serif;
@@ -29,7 +36,7 @@
     =>color값을0.3초동안ease효과를사용하여바꿔라.*/
 }
  /* inline구조에서는 상하값이 안먹힌다.(margin, padding) -> display: inline-block; */
-.header .header_menu a:hover {color: #ccc;}
+.header_menu a:hover {color: #ccc;}
 
 /* 헤더 타이틀 */
 .header_title {
@@ -90,16 +97,16 @@
 }
 
 /* 헤더 아이콘 */
-.header .header_icon {
+.header_icon {
     margin-top: 40px;
     padding-bottom: 45px;
     text-align: center;
 }
-.header .header_icon ul li {
+.header_icon ul li {
     margin: 0 2px; 
     display: inline;
 }
-.header .header_icon ul li a {
+.header_icon ul li a {
     position: relative;
     display: inline-block;
     width: 60px;
@@ -119,13 +126,13 @@
     -ms-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
 }
-.header .header_icon ul li a:hover {
+.header_icon ul li a:hover {
     font-size: 36px;
     box-shadow: 
         0 0 0 3px rgba(75,154,191,.9) inset,
         0 0 0 100px rgba(0,0,0,.1) inset;
 }
-.header .header_icon ul li a span {
+.header_icon ul li a span {
     opacity: 0;
     padding: 4px 9px;
     position: absolute;
@@ -148,7 +155,7 @@
 }
 /* transform으로 가운데 정렬 하는 방법.
     => x축(left, right)과 y(top, bottom)축을 기준으로, 움직인 위치와 반대로(음수값) 적용하면 된다. */
-.header .header_icon ul li a span::before {
+.header_icon ul li a span::before {
     content: '';
     position: absolute;
     left: 50%;
@@ -159,13 +166,14 @@
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
 }
-.header .header_icon ul li a:hover span{
+.header_icon ul li a:hover span{
     opacity: 1;
     top: -35px;
 }
 
 /* 전체 메뉴 */
 .nav {
+    display: none;
     overflow: hidden;
     padding: 25px 0;
 }
@@ -235,7 +243,7 @@
     font-family: 'Yeon Sung', cursive;
     color: #0093bd;
 }
-.title a.btn {
+.title .btn {
     position: absolute;
     top: 5px;
     right: 0;
@@ -256,21 +264,73 @@
     -ms-transition: all .3s ease;
     -o-transition: all .3s ease;
 }
-.title a.btn:hover {
+.title .btn:hover {
     box-shadow:
         0 0 0 3px rgba(75,154,191,.9) inset,
         0 0 0 100px rgba(0,0,0,.1) inset;
 }
 
 /* 미디어 쿼리 */
+/* 화면 너비가 0 부터인 이유는 변수 상위의 변수를 계속 유지하기 때문이다. 
+    화면 마다 변수가 바뀌면 0부터가 아니라 바뀐 변수 부터 시작이 된다. ex) 1025px ~ 1220px
+*/
+/* 화면 너비 0 ~ 1220px */
 @media (max-width: 1220px) {
     .container {width: 100%;}
     .row {padding: 0 15px;}
+    /* // 공통 */
+
+    .title .btn {right: 5px;}
+    /* // 타이틀 버튼 */
 }
 
+/* 화면 너비 0 ~ 1024px */
+@media (max-width: 1024px) {
+}
 
+/* 화면 너비 0 ~ 960px */
+@media (max-width: 960px) {
+    .nav > div {
+        float: none;
+        width: 100%;
+    }
+    .nav ol {margin-bottom: 10px;}
+    .nav .nav_right {width: 100%;}
+    .nav li {width: 33.333%;}
+    .nav .nav_right li {width: 33.333%;}
+    /* // 전체 메뉴 */
+}
 
+/* 화면 너비 0 ~ 768px */
+@media (max-width: 768px) {
+}
 
+/* 화면 너비 0 ~ 600px */
+@media (max-width: 600px) {
+    .header {height: auto;}
+    /* height값을 깨주려면 값을 auto로 주면 된다. */
+    .header_title {display: none;}
+    .header_icon {display: none;}
+    /* // 헤더 */
+
+    .nav li {width: 50%;}
+    .nav .nav_right li {width: 50%;}
+    /* 전체 메뉴 */
+
+    .title .btn {display: none;}
+    /* 타이틀 버튼 */
+}
+
+/* 화면 너비 0 ~ 480px */
+@media (max-width: 480px) {
+}
+
+/* 화면 너비 0 ~ 320px */
+@media (max-width: 320px) {
+    .nav li {width: 100%;}
+    .nav .nav_right li {width: 100%;}
+    /* 전체 메뉴 */
+}
 
 
 
