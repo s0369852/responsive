@@ -332,6 +332,34 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
 /* 한가지 태그에 여러 class가 있다면 css에서 처리할 때 class들을 전부 붙여서 써줘야 한다. 
     ex). class="column col1" => .column.col1 */
 
+/* 첫번째 메뉴 */
+.col1 .menu li {position: relative;}
+.col1 .menu li a {
+    display: block;
+    padding: 10px;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #878787;
+    border-bottom: 1px solid #dbdbdb;
+    transition: box-shadow .5s ease, background .5s ease;
+    -webkit-transition: box-shadow .5s ease, background .5s ease;
+    -moz-transition: box-shadow .5s ease, background .5s ease;
+    -ms-transition: box-shadow .5s ease, background .5s ease;
+    -o-transition: box-shadow .5s ease, background .5s ease;
+}
+/* a태그는 :hover효과시 pointer가 바뀌기 때문에, a태그에 작업을 해주는 것이 좋다. */
+.col1 .menu li a:hover {
+    color: #ffffff;
+    background: rgba(36,130,174);
+    box-shadow: inset 180px 0 0 0 rgba(36,130,174,.7);
+
+}
+.col1 .menu li a i {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+}
+
 
 /* 미디어 쿼리 */
 /* 화면 너비가 0 부터인 이유는 변수 상위의 변수를 계속 유지하기 때문이다. 
