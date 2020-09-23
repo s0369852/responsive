@@ -314,6 +314,18 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
     padding: 15px;
     border-bottom: 1px solid #dbdbdb;
 }
+.col_title {
+    padding-bottom: 5px;
+    font-size: 20px;
+    color: #2f7fa6;
+}
+.col_description {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    line-height: 18px;
+    color: #878787;
+    border-bottom: 1px dashed #dbdbdb;
+}
 .column.col3 {border-bottom: 0;}
 .column.col6 {border-bottom: 0;}
 .column.col9 {border-bottom: 0;}
