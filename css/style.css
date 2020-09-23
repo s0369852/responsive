@@ -430,10 +430,40 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
 
     .nav li {width: 50%;}
     .nav .nav_right li {width: 50%;}
-    /* 전체 메뉴 */
+    /* // 전체 메뉴 */
 
     .title .btn {display: none;}
-    /* 타이틀 버튼 */
+    /* // 타이틀 버튼 */
+
+    .column.col1 {
+        padding: 0;
+        border-bottom: 0;
+    }
+    .column.col1 .col_title {display:  none;}
+    .column.col1 .col_description {display: none;}
+    .column.col1 .menu ul {overflow: hidden;}
+    .column.col1 .menu li {
+        float: left;
+        width: 33.333%;
+        text-align: center;
+        border-right: 1px solid #dbdbdb;
+        box-sizing: border-box;
+        /* border-right를 주고나면 1px씩 총 3px이 width값에 추가가 된다. 그렇게 되면 3등분해논 것이 깨지게 되는데,
+            이때 box-sizing: border-box를 주게 되면, border값이 width값 안에 할당이 되므로 width값이 유지가 된다.*/
+    }
+    .column.col1 .menu li:nth-child(3n) {border-right: 0;}
+    /* 너비가 3등분이 되면서 3번째와 6번째 오른쪽에 border값이 겹침이 일어나므로 겸침을 없애기 위해 nth-child로 3의 배수 번째에는 border-right값을 없앰. */
+    .column.col1 .menu li a {
+        color: #ffffff;
+        text-shadow: 0 0 5px rgba(0, 0, 0, .7);
+    }
+    .column.col1 .menu li a:hover {
+        box-shadow: none;
+        background: rgba(36, 130, 174, .4);
+    }
+    .column.col1 .menu li i {display: none;}
+    .column.col2 {background: #ffffff;}
+    .column.col4 {border-top: 1px solid #dbdbdb;}
 }
 
 /* 화면 너비 0 ~ 480px */
