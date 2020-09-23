@@ -360,6 +360,66 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
     right: 10px;
 }
 
+/* 게시판 영역 */
+.notice_title {
+    padding-bottom: 5px;
+    font-size: 14xp;
+    color: #2f7fa6;
+}
+.notice {position: relative;}
+.notice .more {
+    position: absolute;
+    top: 3px;
+    right: 0;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #878787;
+    
+}
+
+.notice li {
+    padding-left: 8px;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.notice li::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 3px;
+    height: 3px;
+    background: #449ce2;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+/* 한줄 효과 */
+.notice1 li { 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+} 
+
+/* 두줄 효과 */
+.notice2 li {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    /* display: box는 새로나왔기 때문에, 아직은 벤더프리픽스를 써야한다. 그래서 -webkit이 붙었다.
+    webkit은 webkit으로 만든 프로그램을 말하는데 대표적으로 chrome, whale이다. 
+    -webkit-line-clamp: 2; => 2줄을 의미한다. 
+    */
+    max-height: 40px; /*IE버전은 display: -webkit-box가 호환이 안되기 때문에 설정해준 값. (이 이상은 안보이게 설정)*/
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
 
 /* 미디어 쿼리 */
 /* 화면 너비가 0 부터인 이유는 변수 상위의 변수를 계속 유지하기 때문이다. 
