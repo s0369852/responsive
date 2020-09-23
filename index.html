@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximun-scale=1.0, maximun-scale=1.0">
     <meta name="author" content="BYUNG JU LEE">
     <meta name="description" content="반응형 사이트 만들기">
     <meta name="keywords" content="반응형, 웹, 접근성, HTML5, CSS3, web, responsive">
@@ -267,10 +267,37 @@
                 <!-- // col2 -->
 
                 <article class="column col3">
-                    <h4 class="col_title">Tilte</h4>
-                    <p class="col_description">이 곳은 설명 부분입니다.</p>
-                    <!--  -->
-                    <!-- // -->
+                    <h4 class="col_title">Blog</h4>
+                    <p class="col_description">해상도에 따라 이미지를 다르게 표현하는 방법입니다.</p>
+                    <!-- 블로그 이미지 1 -->
+                    <!-- 요즘에는 해상도에 따라서 골라서 이미지를 보여줄 수 있는 구조로 많이 짠다. -->
+                    <!-- 해상도에 따라 이미지 크기를 달리 해야한다. => 이미지 최적화. https://webkit.org/demos/srcset/ -->
+                        <div class="blog blog1">
+                            <h5 class="ir_so">image1</h5>
+                            <!-- img태그를 이용한 해상도 반영 방법 1 -->
+                            <!-- 태그는 아래와 같이 짜고 css에서 @media를 이용해주면 된다. 호환성은 블로그 이미지 2보다 좋다.  -->
+                            <figure>
+                                <img src="img/blog1_@1.jpg" class="img_normal" alt="normal image">
+                                <img src="img/blog1_@2.jpg" class="img_retina" alt="retina image">
+                                <figcaption>반응형 웹 사이트 이미지 글입니다. 반응형 웹 사이트 이미지 글입니다. 반응형 웹 사이트 이미지 글입니다. 반응형 웹 사이트 이미지 글입니다.</figcaption>
+                            </figure>
+                        </div>
+                    <!-- // 블로그 이미지 1-->
+
+                    <!-- 블로그 이미지 2 -->
+                    <div class="blog blog2">
+                        <h5 class="ir_so">image2</h5>
+                        <!-- img태그를 이용한 해상도 반영 방법 2 (srcset) => -->
+                        <!-- HTML 5.1 부터 img element에 srcset 속성이 추가 되었습니다. 현재 IE와 오페라미니를 제외한 모든 브라우저 에서 지원하고 있습니다. -->
+                        <!-- srcset이 좀 더 간편하긴 한데, 아직까진 호환성이 떨어진다. -->
+                        <figure>
+                            <img src="img/blog2_@1.jpg" srcset="img/blog2_@1.jpg 1x, img/blog2_@2.jpg 2x" alt="blog imgae">
+                            <!-- <img src="image-src.png" srcset="image-1x.png 1x, image-2x.png 2x"> -->
+                            <!-- <img src="(경로)" srcset="(1배수 이미지의 경로) 1x, (2배수 이미지의 경로) 2x"> -->
+                            <figcaption>반응형 웹 사이트 이미지 글입니다. 반응형 웹 사이트 이미지 글입니다. 반응형 웹 사이트 이미지 글입니다. 반응형 웹 사이트 이미지 글입니다.</figcaption>
+                        </figure>
+                    </div>
+                    <!-- // 블로그 이미지 2 -->
                 </article>
                 <!-- // col3 -->
             </section>
