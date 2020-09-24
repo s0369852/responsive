@@ -317,6 +317,7 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
 .col_title {
     padding-bottom: 5px;
     font-size: 20px;
+    font-weight: bold;
     color: #2f7fa6;
 }
 .col_description {
@@ -698,7 +699,23 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
         width: 100%;
         border-top: 1px solid #dbdbdb;
     }
-    /* 컨텐츠 영역 */
+    /* // 컨텐츠 영역 */
+
+    #content_right {overflow: hidden;}
+    #content_right .column {
+        float: left;
+        width: 33.333%;
+        box-sizing: border-box;
+    }
+    #content_right .column.col7 {
+        border-right: 1px solid #dbdbdb;
+        border-bottom: 0;
+    }
+    #content_right .column.col8 {
+        border-right: 1px solid #dbdbdb;
+        border-bottom: 0;
+    }
+    /* // 사이드 이펙트 */
 }
 
 /* 화면 너비 0 ~ 768px */
@@ -767,6 +784,11 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
     .square a:nth-child(5n) {display: block;}
     /* // 라이트 박스 */
 
+    #content_right .column {width: 50%;}
+    #content_right .column.col8 {border-right: 0;}
+    #content_right .column.col9 {display: none;}
+    /* // 사이드 이펙트 */
+
 }
 
 /* 화면 너비 0 ~ 480px */
@@ -784,6 +806,16 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
         margin-right: 0;
         width: 100%;
     }
+    /* // 라이트 박스 */
+
+    #content_right .column {width: 100%;}
+    #content_right .column.col7 {
+        border-right: 0; 
+        border-bottom: 1px solid #dbdbdb;
+    }
+    #content_right .column.col8 {border-bottom: 1px solid #dbdbdb;}
+    #content_right .column.col9 {display: block;}
+    /* // 사이드 이펙트 */
 
 }
 
