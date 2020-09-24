@@ -646,6 +646,31 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
     height: 100%;
 }
 
+/* 푸터 */
+.footer {
+    padding: 30px 50px;
+    text-align: center;
+}
+.footer li {
+    padding: 0 7px 0 10px;
+    position: relative;
+    display: inline;
+    white-space: nowrap;
+}
+.footer li::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 1px;
+    height: 14px;
+    background-color: #dbdbdb;
+}
+.footer li:first-child::before {width: 0;}
+
+.footer address {padding-top: 10px;}
+
+
 
 /* 미디어 쿼리 */
 /* 화면 너비가 0 부터인 이유는 변수 상위의 변수를 계속 유지하기 때문이다. 
@@ -788,7 +813,6 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
     #content_right .column.col8 {border-right: 0;}
     #content_right .column.col9 {display: none;}
     /* // 사이드 이펙트 */
-
 }
 
 /* 화면 너비 0 ~ 480px */
