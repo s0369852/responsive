@@ -420,20 +420,44 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
 }
 
 /* 블로그 영역 */
-.blog {}
 .blog img {width: 100%;}
+
+/* blog 1 */
 .blog1 .img_retina {display: none;}
 /* 어떨때 retina 이미지를 사용해야 하는가? 
     화면 비율이 1.5이상이 되었을 때, retina 이미지는 활성을 시켜주고 normal 이미지는 none시켜준다. */
 /* 현재까지는 3배(3x), 4배(4x)까지는 잘 신경쓰진 않지만, 2배(2x)까지는 해줘야 한다. */
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
         only screen and (min-device-pixel-ratio: 1.5),
-        only screen and (min-resolution: 1.5ppx) {
+        only screen and (min-resolution: 1.5dppx) {
             .blog1 .img_normal {display: none;}
             .blog1 .img_retina {display: initial;}
         }
 
-.blog1 figure figcaption {}
+/* blog 2 */
+.blog2 h5 {
+    padding: 30px 30px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+.blog2 .retina {
+    background-image: url(../img/blog3_@1.jpg);
+    background-size: cover;
+    /* background-image => 영역이 잡힌곳에만 이미지가 나온다. = img태그 쓸 때랑의 차이점. */
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+        only screen and (min-device-pixel-ratio: 1.5),
+        only screen and (min-resolution: 1.5dppx) {
+            .blog2 .retina {background-image: url(../img/blog3_@2.jpg);}
+        }
+@media only screen and (-webkit-min-device-pixel-ratio: 3),
+        only screen and (min-device-pixel-ratio: 3),
+        only screen and (min-resolution: 3) {
+            .blog2 .retina {background-image: url(../img/blog3_@3.jpg);}
+        }
+
+.blog2 p {padding-top: 5px;}
 
 
 /* 미디어 쿼리 */

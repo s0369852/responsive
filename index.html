@@ -272,6 +272,8 @@
                     <!-- 블로그 이미지 1 -->
                     <!-- 요즘에는 해상도에 따라서 골라서 이미지를 보여줄 수 있는 구조로 많이 짠다. -->
                     <!-- 해상도에 따라 이미지 크기를 달리 해야한다. => 이미지 최적화. https://webkit.org/demos/srcset/ -->
+                    <!-- 고해상도 이미지는 이미지의 크기에 따라 용량도 차이가 난다. 그렇기 때문에 이미지를 불러오는 작업을 할때 최적화된 작업이 필요하다. -->
+                    <!-- 권장 사항으로는 1. Resolution 미디어 쿼리(background-image)의 사용, 2. retina.js를 사용, 3. srcset 사용. -->
                         <div class="blog blog1">
                             <h5 class="ir_so">image1</h5>
                             <!-- img태그를 이용한 해상도 반영 방법 1 -->
@@ -281,21 +283,26 @@
                                 <img src="img/blog1_@2.jpg" class="img_retina" alt="retina image">
                                 <figcaption>반응형 웹 사이트 이미지 글입니다. 반응형 웹 사이트 이미지 글입니다. 반응형 웹 사이트 이미지 글입니다. 반응형 웹 사이트 이미지 글입니다.</figcaption>
                             </figure>
+
+                            <!-- img태그를 이용한 해상도 반영 방법 2 (srcset) => -->
+                            <!-- HTML 5.1 부터 img element에 srcset 속성이 추가 되었습니다. 현재 IE와 오페라미니를 제외한 모든 브라우저 에서 지원하고 있습니다. -->
+                            <!-- srcset이 좀 더 간편하긴 한데, 아직까진 호환성이 떨어진다. -->
+                            <!-- <figure> -->
+                                <!-- <img src="img/blog2_@1.jpg" srcset="img/blog2_@1.jpg 1x, img/blog2_@2.jpg 2x" alt="blog imgae"> -->
+                                <!-- <img src="image-src.png" srcset="image-1x.png 1x, image-2x.png 2x"> -->
+                                <!-- <img src="(경로)" srcset="(1배수 이미지의 경로) 1x, (2배수 이미지의 경로) 2x"> -->
+                                <!-- <figcaption>반응형 웹 사이트 이미지 글입니다. 반응형 웹 사이트 이미지 글입니다. 반응형 웹 사이트 이미지 글입니다. 반응형 웹 사이트 이미지 글입니다.</figcaption> -->
+                            </figure>
                         </div>
                     <!-- // 블로그 이미지 1-->
 
                     <!-- 블로그 이미지 2 -->
-                    <div class="blog blog2">
-                        <h5 class="ir_so">image2</h5>
-                        <!-- img태그를 이용한 해상도 반영 방법 2 (srcset) => -->
-                        <!-- HTML 5.1 부터 img element에 srcset 속성이 추가 되었습니다. 현재 IE와 오페라미니를 제외한 모든 브라우저 에서 지원하고 있습니다. -->
-                        <!-- srcset이 좀 더 간편하긴 한데, 아직까진 호환성이 떨어진다. -->
-                        <figure>
-                            <img src="img/blog2_@1.jpg" srcset="img/blog2_@1.jpg 1x, img/blog2_@2.jpg 2x" alt="blog imgae">
-                            <!-- <img src="image-src.png" srcset="image-1x.png 1x, image-2x.png 2x"> -->
-                            <!-- <img src="(경로)" srcset="(1배수 이미지의 경로) 1x, (2배수 이미지의 경로) 2x"> -->
-                            <figcaption>반응형 웹 사이트 이미지 글입니다. 반응형 웹 사이트 이미지 글입니다. 반응형 웹 사이트 이미지 글입니다. 반응형 웹 사이트 이미지 글입니다.</figcaption>
-                        </figure>
+                    <div class="blog blog2 mt15">
+                        <!-- background-image를 통해서 작업. -->
+                        <div class="retina">
+                            <h5>image2</h5>
+                        </div>
+                        <p>반응형 웹 사이트 이미지 글입니다. 반응형 웹 사이트 이미지 글입니다. 반응형 웹 사이트 이미지 글입니다. 반응형 웹 사이트 이미지 글입니다.</p>
                     </div>
                     <!-- // 블로그 이미지 2 -->
                 </article>
