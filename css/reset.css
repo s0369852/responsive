@@ -5,6 +5,7 @@ body, div, ul, ol, li, dl, dd, dt,
 h1, h2, h3, h4, h5, h6, input, fieldset, legend,
 p, select, table, th, td, tr, textarea, button,
 form, figure, figcaption {margin: 0; padding: 0;}
+/* 이미지태그를 figure에 넣어서 하게되는데 그러면 여백 설정이 먹히지 않으니(width: 100%일때 양옆으로 여백이 생긴다.), 리셋 설정할때 figure, figcaption도 같이 설정하기. */
 
 /* a 링크 초기화 */
 a {text-decoration: none; color: #222;}
@@ -31,6 +32,15 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 13px; 
     font-weight: normal;
 }
+
+/* 버튼 초기화 */
+button {
+    border: none;
+    background-color: transparent;
+}
+
+/* 반응형 이미지 */
+img {width: 100%;}
 
 /* 대체 텍스트 */
 

@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/slick.css">
 
     <!-- 파비콘 -->
     <link rel="shortcut icon" href="icon/favicon.ico">
@@ -59,6 +60,7 @@
     <!-- JavaScript Libraries -->
     <script defer src="js/jquery.min_1.12.4.js"></script>
     <script defer src="js/modernizr-custom.js"></script>
+    <script defer src="js/slick.min.js"></script>
     <script defer src="js/main.js"></script>
     <!-- modernizer => 현재 사용하는 브라우저의 특징을 응답해준다.(현재 브라우저에서 지원하는지 안하는지를 알려준다.) -->
     <!-- 웹페이지의 개발자 도구를 꺼내보면, 
@@ -313,9 +315,39 @@
             <section id="content_center">
                 <h3 class="ir_so">반응형 사이트 가운데 컨텐츠</h3>
                 <article class="column col4">
-                    <h4 class="col_title">Tilte</h4>
-                    <p class="col_description">이 곳은 설명 부분입니다.</p>
-                    <!--  -->
+                    <h4 class="col_title">Slick Slider</h4>
+                    <p class="col_description">slick.js를 이용한 이미지 슬라이드 효과입니다.</p>
+                    <!-- 이미지 슬라이드 -->
+                        <div class="slider">
+                            <!-- 기본적으로 class="slider"을 가져다가 jQuery를 통해서 이미지를 가져오고, 갯수를 파악하고, 방향, 위치 설정등을 다해준다. -->
+                            <div class="slide_img slide_img1">
+                                <figure>
+                                    <img src="img/slider001.jpg " alt="이미지1">
+                                    <figcaption>
+                                        <em>Responsive Site1</em>
+                                        <span>슬라이드 플러그인을 이용한 반응형 이미지 슬라이드 입니다.</span>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="slide_img slide_img2">
+                                <figure>
+                                    <img src="img/slider001.jpg " alt="이미지2">
+                                    <figcaption>
+                                        <em>Responsive Site2</em>
+                                        <span>슬라이드 플러그인을 이용한 반응형 이미지 슬라이드 입니다.</span>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="slide_img slide_img3">
+                                <figure>
+                                    <img src="img/slider001.jpg " alt="이미지3">
+                                    <figcaption>
+                                        <em>Responsive Site3</em>
+                                        <span>슬라이드 플러그인을 이용한 반응형 이미지 슬라이드 입니다.</span>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
                     <!-- // -->
                 </article>
                 <!-- // col4 -->
