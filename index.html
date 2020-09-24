@@ -10,9 +10,10 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/font-awesome.css">
     <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/lightgallery.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <!-- 파비콘 -->
     <link rel="shortcut icon" href="icon/favicon.ico">
@@ -60,14 +61,16 @@
     <!-- JavaScript Libraries -->
     <script defer src="js/jquery.min_1.12.4.js"></script>
     <script defer src="js/modernizr-custom.js"></script>
-    <script defer src="js/slick.min.js"></script>
-    <script defer src="js/main.js"></script>
     <!-- modernizer => 현재 사용하는 브라우저의 특징을 응답해준다.(현재 브라우저에서 지원하는지 안하는지를 알려준다.) -->
     <!-- 웹페이지의 개발자 도구를 꺼내보면, 
         <html lang="ko" class=" cookies json queryselector svg atobbtoa atob-btoa classlist cssgradients no-touchevents displaytable display-table nthchild backgroundsize bgsizecover boxshadow boxsizing">
         이렇게 뜨는게 보이는데 이게 바로 modernizer.
         현재 사이트에서 작동이 되는 것을 알려준다. 앞에 "no"가 붙은 것은 안된다. => ex). no-touchevents (터치이벤트 기능은 지원이 안된다.)
     -->
+    <script defer src="js/slick.min.js"></script>
+    <script defer src="js/lightgallery.min.js"></script>
+    <script defer src="js/main.js"></script>
+    
 
 </head>
 <body>
@@ -348,15 +351,57 @@
                                 </figure>
                             </div>
                         </div>
-                    <!-- // -->
+                    <!-- // 이미지 슬라이드-->
                 </article>
                 <!-- // col4 -->
 
                 <article class="column col5">
-                    <h4 class="col_title">Tilte</h4>
-                    <p class="col_description">이 곳은 설명 부분입니다.</p>
-                    <!--  -->
-                    <!-- // -->
+                    <h4 class="col_title">Blend Effect</h4>
+                    <p class="col_description">Background-blend-mode와 mix-blend-mode</p>
+                    <!-- 라이트 박스 -->
+                        <div class="lightbox square clearfix">
+                            <a href="img/light01_s.jpg">
+                                <img src="img/light01.jpg" class="blur" alt="이미지1">
+                                <em>Blur</em>
+                            </a>
+                            <a href="img/light02_s.jpg">
+                                <img src="img/light02.jpg" class="brightness" alt="이미지2">
+                                <em>Brightness</em>
+                            </a>
+                            <a href="img/light03_s.jpg">
+                                <img src="img/light03.jpg" class="contrast" alt="이미지3">
+                                <em>Contrast</em>
+                            </a>
+                            <a href="img/light04_s.jpg">
+                                <img src="img/light04.jpg" class="grayscale" alt="이미지4">
+                                <em>Grayscale</em>
+                            </a>
+                            <a href="img/light05_s.jpg">
+                                <img src="img/light05.jpg" class="hue-rotate" alt="이미지5">
+                                <em>Hue-rotate</em>
+                            </a>
+                            <a href="img/light06_s.jpg">
+                                <img src="img/light06.jpg" class="invert" alt="이미지6">
+                                <em>Invert</em>
+                            </a>
+                            <a href="img/light07_s.jpg">
+                                <img src="img/light07.jpg" class="opacity" alt="이미지7">
+                                <em>Opacity</em>
+                            </a>
+                            <a href="img/light08_s.jpg">
+                                <img src="img/light08.jpg" class="saturate" alt="이미지8">
+                                <em>Saturate</em>
+                            </a>
+                            <a href="img/light09_s.jpg">
+                                <img src="img/light09.jpg" class="sepia" alt="이미지9">
+                                <em>Sepia</em>
+                            </a>
+                            <a href="img/light10_s.jpg">
+                                <img src="img/light10.jpg" class="mix" alt="이미지10">
+                                <em>Mix</em>
+                            </a>
+                        </div>
+                    <!-- // 라이트 박스 -->
                 </article>
                 <!-- // col5 -->
 

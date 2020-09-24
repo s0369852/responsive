@@ -590,6 +590,48 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
     text-indent: 0;
 }
 
+/* 라이트 박스 */
+.square a {
+    margin: 0.5%;
+    overflow: hidden;
+    position: relative;
+    float: left;
+    width: 19%;
+}
+.square a img {
+    display: block;
+    width: 100%;
+}
+.square a em {
+    opacity: 1;
+    position: absolute;
+    bottom: -30px;
+    text-align: center;
+    width: 100%;
+    color: #ffffff;
+    background: rgba(0, 0, 0, .7);
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+}
+.square a:hover em {
+    bottom: 0;
+    background: rgba(0, 0, 0, .4);
+}
+.square a:hover .blur { filter: blur(2px); -webkit-filter: blur(2px); }
+.square a:hover .brightness { filter: brightness(50%); -webkit-filter: brightness(50%); }
+.square a:hover .contrast { filter: contrast(10%); -webkit-filter: contrast(10%); }
+.square a:hover .grayscale { filter: grayscale(100%); -webkit-filter: grayscale(100%); }
+.square a:hover .hue-rotate { filter: hue-rotate(120deg); -webkit-filter: hue-rotate(120deg); }
+.square a:hover .invert { filter: invert(100%); -webkit-filter: invert(100%); }
+.square a:hover .opacity { filter: opacity(40%); -webkit-filter: opacity(40%); }
+.square a:hover .saturate { filter: saturate(10%); -webkit-filter: saturate(10%); }
+.square a:hover .sepia { filter: sepia(120%); -webkit-filter: sepia(120%); }
+.square a:hover .mix { filter: sepia(120%) hue-rotate(120deg); -webkit-filter: sepia(120%) hue-rotate(120deg); }
+
+
 /* 미디어 쿼리 */
 /* 화면 너비가 0 부터인 이유는 변수 상위의 변수를 계속 유지하기 때문이다. 
     화면 마다 변수가 바뀌면 0부터가 아니라 바뀐 변수 부터 시작이 된다. ex) 1025px ~ 1220px
@@ -604,11 +646,18 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
     /* // 타이틀 버튼 */
 
     #contents .container {border: 0;} /*border값도 스크롤바가 생기는 원인이 될 수 있다. 스크롤바가 생긴다면 border값도 확인해봐야 한다.*/
-    /* 컨텐츠 영역 */
+    /* //컨텐츠 영역 */
+
+    .square a {width: 24%;}
+    .square a:nth-child(5n) {display: none;}
+    /* // 라이트 박스 */
 }
 
 /* 화면 너비 0 ~ 1024px */
 @media (max-width: 1024px) {
+    .square a {width: 32.333%;}
+    .square a:nth-child(5) {display: block;}
+    /* // 라이트 박스 */
 }
 
 /* 화면 너비 0 ~ 960px */
@@ -700,6 +749,10 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
     .column.col4 {border-top: 1px solid #dbdbdb;}
     /* // 첫번째 메뉴 */
 
+    .square a {width: 49%;}
+    .square a:nth-child(5n) {display: block;}
+    /* // 라이트 박스 */
+
 }
 
 /* 화면 너비 0 ~ 480px */
@@ -711,6 +764,13 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
     .nav li {width: 100%;}
     .nav .nav_right li {width: 100%;}
     /* 전체 메뉴 */
+
+    .square a {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+
 }
 
 
