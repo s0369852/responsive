@@ -364,7 +364,7 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
 /* 게시판 영역 */
 .notice_title {
     padding-bottom: 5px;
-    font-size: 14xp;
+    font-size: 14px;
     color: #2f7fa6;
 }
 .notice {position: relative;}
