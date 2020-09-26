@@ -646,6 +646,240 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
     height: 100%;
 }
 
+/* 사이드 이펙트 */
+
+/* 사이드 이펙트 1 */
+.side1 {
+    position: relative;
+    display: block;
+    perspective: 600px; /* 기본적으로 3d를 사용했기 때문에 원근점이 필요하다. -> 상위박스에게 줘서 거리감을 작업. */
+}
+.side1 .front {
+    transform-style: preserve-3d; /* 3d 작업을 하겠다.*/
+    transform: rotateY(0deg); /* 앞에는 그래도 있다가, 마우스를 오버하면 돌아가는 것.*/
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    backface-visibility: hidden; 
+    -webkit-backface-visibility: hidden;
+    /* hidden => 3d를 사용하기 때문에 뒷면이 보인다. 그 뒷면을 감춰주기 위해서 사용된다. -> 앞면과 뒷면 서로의 뒷면을 안보이게 설정해 놨기 때문에 하나가 돌아가는 것처럼 보임.*/
+}
+.side1 .back {
+    z-index: -1;
+    /*뒤에있기때문에현재는안보이도록*/position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    color: #ffffff;
+    background-color: #4038dc;
+    transform: rotateY(-180deg); /* 뒤에는 돌아져 있다가, 마우스를 오버하면 앞으로 돌린다.*/
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    backface-visibility: hidden; /* 3d를 사용하기 때문에 뒷면이 보인다. 그 뒷면을 감춰주기 위해서 사용된다. */
+    -webkit-backface-visibility: hidden;
+}
+.side1 .back i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 60px;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+.side1:hover .front {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+}
+.side1:hover .back {
+    z-index: 1; /*돌려 졌을 때는 다시 앞으로 나오게 1로 설정해주면 된다. */
+    transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+}
+
+/* 사이드 이펙트 2 */
+.side2 {
+    position: relative;
+    display: block;
+    perspective: 600px;
+}
+.side2 .front {
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+}
+.side2 .front figcaption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    text-align: center;
+    transform: translate(-50%, -50%) translateZ(100px);
+    -webkit-transform: translate(-50%, -50%) translateZ(100px);
+    -moz-transform: translate(-50%, -50%) translateZ(100px);
+    -ms-transform: translate(-50%, -50%) translateZ(100px);
+    -o-transform: translate(-50%, -50%) translateZ(100px);
+    /* translateZ(100px) => 3d 느낌이 나도록 하는 것. 둥 띄워져있는 것 같은 느낌이 난다. */
+}
+.side2 .back {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+.side2 .back figcaption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    text-align: center;
+    transform: translate(-50%, -50%) translateZ(100px);
+    -webkit-transform: translate(-50%, -50%) translateZ(100px);
+    -moz-transform: translate(-50%, -50%) translateZ(100px);
+    -ms-transform: translate(-50%, -50%) translateZ(100px);
+    -o-transform: translate(-50%, -50%) translateZ(100px);
+}
+
+.side2 figcaption {
+    padding: 3px 10px;
+    width: 60%;
+    color: #ffffff;
+    font-size: 20px;
+    font-family: 'Abel';
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, .4);
+}
+.side2:hover .front {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+}
+.side2:hover .back {
+    z-index: 1;
+    transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+}
+
+/* 사이드 이펙트 3 */
+.side3 {
+    position: relative;
+    overflow: hidden;
+}
+.side3 figcaption {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(350%, -50%) rotate(180deg);
+    -webkit-transform: translate(350%, -50%) rotate(180deg);
+    -moz-transform: translate(350%, -50%) rotate(180deg);
+    -ms-transform: translate(350%, -50%) rotate(180deg);
+    -o-transform: translate(350%, -50%) rotate(180deg);
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+}
+.side3 figcaption::after {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    background-color: #000000;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.side3:hover figcaption {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotateY(0);
+    -webkit-transform: translate(-50%, -50%) rotateY(0);
+    -moz-transform: translate(-50%, -50%) rotateY(0);
+    -ms-transform: translate(-50%, -50%) rotateY(0);
+    -o-transform: translate(-50%, -50%) rotateY(0);
+}
+.side3 figcaption h3 {font-size: 16px;}
+.side3 figcaption h3 em {
+    display: block;
+    font-weight: bold;
+}
+.side3 img {
+    display: block;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+.side3:hover img {opacity: 0.4;} /* 오버효과를 했을때 이미지가 살짝 연해지게 */
+
 /* 푸터 */
 .footer {
     padding: 30px 50px;
